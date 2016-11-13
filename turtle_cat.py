@@ -3,12 +3,12 @@ import math
 
 def draw_shape():
     window = turtle.Screen()
-    window.bgcolor("black")
+    window.bgcolor("gray")
 
     cursor = turtle.Turtle() # Cursor
     cursor.shape("turtle")
     cursor.color("white")
-    cursor.speed(0)
+    cursor.speed(3)
     cursor.pensize(10)
 
     # Draw the head
@@ -18,12 +18,14 @@ def draw_shape():
 
     # Draw the nose
 
-    movePenY(cursor, -20)
+    noseMouthOffset = -15
+
+    movePenY(cursor, -20 + noseMouthOffset)
     cursor.circle(20)
 
     # Draw the mouth
 
-    movePen(cursor, -100, -20)
+    movePen(cursor, -100, -20 + noseMouthOffset)
     cursor.right(90)
     cursor.circle(50, 180)
     cursor.left(180)
@@ -46,15 +48,61 @@ def draw_shape():
     movePen(cursor, -eyeSpacingX, eyePosY)
     cursor.circle(eyeRadius, 180)
 
-    cursor.speed(3)
-
     # Draw the tongue
 
-    pos = positionAlongCircle(0, 0, 150, 90)
-    movePen(cursor, pos[0], pos[1])
-    cursor.forward(100)
-    print( pos )
+    movePen(cursor, -20, -60 + noseMouthOffset)
+    cursor.circle(20, 180)
 
+    # Draw the ears
+
+    # Right ear
+
+    earBeginAngle = 25
+    earSize = 85
+    earWidth = 22
+    positionA = positionAlongCircle(0, 0, 150, earBeginAngle)
+    movePen(cursor, positionA[0], positionA[1])
+
+    positionB = positionAlongCircle(0, 0, 150 + earSize, earBeginAngle + earWidth)
+    cursor.setposition(positionB[0], positionB[1])
+
+    positionC = positionAlongCircle(0, 0, 150, earBeginAngle + earWidth * 2)
+    cursor.setposition(positionC[0], positionC[1])
+
+    # Left ear
+
+    positionA = positionAlongCircle(0, 0, 150, -earBeginAngle)
+    movePen(cursor, positionA[0], positionA[1])
+
+    positionB = positionAlongCircle(0, 0, 150 + earSize, -earBeginAngle + -earWidth)
+    cursor.setposition(positionB[0], positionB[1])
+
+    positionC = positionAlongCircle(0, 0, 150, -earBeginAngle + -earWidth * 2)
+    cursor.setposition(positionC[0], positionC[1])
+
+    # Whiskers
+
+    whiskerLength = 180
+
+    # Right whiskers
+
+    movePen(cursor, 50, -15)
+    cursor.setheading(0)
+    cursor.forward(whiskerLength)
+
+    movePen(cursor, 50, 0)
+    cursor.left(5)
+    cursor.forward(whiskerLength)
+
+    # Left whiskers
+
+    movePen(cursor, -50, -15)
+    cursor.setheading(180)
+    cursor.forward(whiskerLength)
+
+    movePen(cursor, -50, 0)
+    cursor.left(-5)
+    cursor.forward(whiskerLength)
 
     window.exitonclick()
 
