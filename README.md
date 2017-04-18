@@ -29,7 +29,7 @@ _For questions and bug reports, reach out at rosesponseller@gmail.com_
 
  * Python 3.2
  * Python Turtle library
- * Python Math library_
+ * Python Math library
 
 ### License
 
