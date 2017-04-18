@@ -1,14 +1,14 @@
-# _{Turtle Cat}_
+# _Turtle Cat_
 
 ***
 
-#### _{A program made in the Python Turtle library}, {November 16, 2016}_
+#### _A program made in the Python Turtle library, November 16, 2016_
 
-#### By _**{Rose and Cory Sponseller}**_
+#### By _**Rose and Cory Sponseller**_
 
 ## Description
 
-_{This program draws a cat using the Python Turtle library.}_
+_This program draws a cat using the Python Turtle library._
 
 ## Setup/Installation Requirements
 
@@ -19,22 +19,20 @@ _{This program draws a cat using the Python Turtle library.}_
 
 ## Known Bugs
 
-_{None known, but feel free let me know if there are!}_
+_None known, but feel free let me know if there are!_
 
 ## Support and contact details
 
-_{For questions and bug reports, reach out at rosesponseller@gmail.com}_
+_For questions and bug reports, reach out at rosesponseller@gmail.com_
 
 ## Technologies Used
 
-_{Python 3.2
-
-  Python Turtle library
-
-  Python Math library}_
+ * Python 3.2
+ * Python Turtle library
+ * Python Math library_
 
 ### License
 
-*{This software is licensed under the MIT license.}*
+*This software is licensed under the MIT license.*
 
-Copyright (c) 2016 **_{Rose Sponseller and Cory Sponseller}_**
+Copyright (c) 2016 **_Rose Sponseller and Cory Sponseller_**
